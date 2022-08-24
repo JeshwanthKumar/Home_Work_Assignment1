@@ -7,4 +7,4 @@ if __name__ == '__main__':
         student_marks[name] = scores
     query_name = input()
     result = [value for key, value in student_marks.items() if key == query_name]
-    print(f'{(sum(*result)/len(*result)):0.2f}')
+    print("{:.2f}".format(sum(*result)/len(*result)))
