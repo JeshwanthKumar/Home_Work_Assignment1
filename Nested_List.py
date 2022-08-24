@@ -4,6 +4,8 @@ if __name__ == '__main__':
         name = input()
         score = float(input())
         object[name] = score
-    s_list = sorted(set(object.values()))
-    result = sorted(key for key, value in object.items() if value == s_list[1])
+    s_list = set(object.values())
+    s_list = sorted(s_list)
+    result = (key for key, value in object.items() if value == s_list[1])
+    result = sorted(result)
     print(*result, sep='\n')
